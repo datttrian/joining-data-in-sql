@@ -1,3 +1,7 @@
+# Joining Data in SQL
+
+## Introducing Inner Joins
+
 ### Your first join
 
 Throughout this course, you'll be working with the `countries` database,
@@ -20,12 +24,36 @@ to choose specific columns in step 3.
 
 - Begin by selecting all columns from the `cities` table, using the SQL
   shortcut that selects all.
+- Perform an inner join with the `cities` table on the left and the `countries` table on the right; do not alias tables here or in the next step.
+- Identify the relevant column names to join `ON` by inspecting the `cities` and `countries` tabs in the console.
 
 **Answer**
 
 ```{python}
 %%sql
+-- Select all columns from cities
+SELECT *
+FROM cities;
+```
 
+```{python}
+%%sql
+SELECT * 
+FROM cities
+-- Inner join to countries
+INNER JOIN countries
+-- Match on country codes
+ON cities.country_code = countries.code;
+```
+
+```{python}
+%%sql
+SELECT * 
+FROM cities
+-- Inner join to countries
+INNER JOIN countries
+-- Match on country codes
+ON cities.country_code = countries.code;
 ```
 
 ### Joining with aliased tables
@@ -183,6 +211,8 @@ stating that *both* the country `code` *and* `year` should match!
 %%sql
 
 ```
+
+## Outer Joins, Cross Joins and Self Joins
 
 ### This is a LEFT JOIN, right?
 
@@ -420,6 +450,8 @@ whenever you are aliasing tables with the same first letter.
 
 ```
 
+## Set Theory for SQL Joins
+
 ### Comparing global economies
 
 Are you ready to perform your first set operation?
@@ -515,6 +547,8 @@ the same names as their countries.
 %%sql
 
 ```
+
+## Subqueries
 
 ### Semi join
 
