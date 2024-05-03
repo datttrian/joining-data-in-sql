@@ -89,22 +89,12 @@ CREATE TABLE eu_countries (
   name VARCHAR
 );
 
--- Copy over data from CSVs
-
 \copy cities FROM '/tmp/cities.csv' DELIMITER ',' CSV HEADER;
-
 \copy economies FROM '/tmp/economies.csv' DELIMITER ',' CSV HEADER;
-
 \copy currencies FROM '/tmp/currencies.csv' DELIMITER ',' CSV HEADER;
-
 \copy countries FROM '/tmp/countries.csv' DELIMITER ',' CSV HEADER;
-
 \copy languages FROM '/tmp/languages.csv' DELIMITER ',' CSV HEADER;
-
 \copy populations FROM '/tmp/populations.csv' DELIMITER ',' CSV HEADER;
-
 \copy eu_countries FROM '/tmp/eu_countries.csv' DELIMITER ',' CSV HEADER;
-
 \copy economies2015 FROM '/tmp/economies2015.csv' DELIMITER ',' CSV HEADER;
-
 \copy economies2019 FROM '/tmp/economies2019.csv' DELIMITER ',' CSV HEADER;
