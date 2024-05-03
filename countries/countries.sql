@@ -89,7 +89,7 @@ CREATE TABLE eu_countries (
 );
 
 -- Copy over data from CSVs
-COPY cities FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/cddfccbc63c3f4174cb05983e1d702f950e0dfa7/cities.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
+\COPY cities FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/cddfccbc63c3f4174cb05983e1d702f950e0dfa7/cities.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY economies FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/ec5372f648d672e3ef15ae863ed8a5bb9debf727/economies.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY currencies FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/bfc4b7c18b703d6b51f48effaec10e59e874a3f8/currencies.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY countries FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/a466156a6b08d11a1ef12acdb30fb499d2149672/countries.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
@@ -98,4 +98,3 @@ COPY populations FROM PROGRAM 'curl "https://assets.datacamp.com/production/repo
 COPY eu_countries FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/5cc5739b7d2e5079e86d1fe75be0de8a927f9041/eu_countries.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY economies2015 FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/ce0bb6334965e7c1ab5416a70a64ea27012167b2/economies2015.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY economies2019 FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/7430c0d1f620c524530a9a15640a436e771fbd6d/economies2019.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
-
