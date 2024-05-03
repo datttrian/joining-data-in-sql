@@ -644,7 +644,6 @@ whenever you are aliasing tables with the same first letter.
   `size2015` (in that order).
 - Since you want to compare records from 2010 and 2015, eliminate unwanted records by extending the `WHERE` statement to include only records where the `p1.year` matches `p2.year - 5`.
 
-
 **Answer**
 
 ```{python}
@@ -834,6 +833,7 @@ table by this selection.
 - Write a second query to `SELECT` the name of each unique language appearing in the `languages` table; do not use column aliases here.
 - Order the result set by `name` in ascending order.
 - Create a semi join out of the two queries you've written, which filters unique languages returned in the first query for only those languages spoken in the `'Middle East'`.
+
 **Answer**
 
 ```{python}
