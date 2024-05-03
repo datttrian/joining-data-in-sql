@@ -943,6 +943,7 @@ calculation into another query.
   `populations` table.
 - Filter your answer to use records from `2015` only.
 - The answer from your query has now been nested into another query; use this calculation to filter `populations` for all records where `life_expectancy` is `1.15` times higher than average.
+
 **Answer**
 
 ```{python}
