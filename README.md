@@ -8,12 +8,14 @@ This is the repository for the DataCamp course Joining Data in SQL. The full cou
 
 Joining data is an essential skill that enables us to draw information from separate tables together into a single, meaningful set of results. Learn to supercharge your queries using table joins and relational set theory in this course on joining data. In this course, you’ll learn how to work with more than one table in SQL, use inner joins, outer joins, and cross joins, leverage set theory, including unions, intersect, and except clauses, and create nested queries. Every step is accompanied by exercises and opportunities to apply the theory and grow your confidence in SQL.
 
-## PostgreSQL Docker Setup
+## Schema
 
 ``` sh
 set -euo pipefail
 mkdir -p "$HOME"/.local/docker/postgresql
 docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=local -d -p 5432:5432 -e PGDATA=/var/lib/postgresql/data/pgdata -v "$HOME"/.local/docker/postgresql/data:/var/lib/postgresql/data postgres
+docker cp books.csv pg-docker:/tmp/books.csv
+
 docker exec -it pg-docker /bin/bash
 ```
 

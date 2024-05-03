@@ -89,7 +89,7 @@ CREATE TABLE eu_countries (
 );
 
 -- Copy over data from CSVs
-\COPY cities FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/cddfccbc63c3f4174cb05983e1d702f950e0dfa7/cities.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
+COPY cities FROM PROGRAM 'wget "https://assets.datacamp.com/production/repositories/6053/datasets/cddfccbc63c3f4174cb05983e1d702f950e0dfa7/cities.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY economies FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/ec5372f648d672e3ef15ae863ed8a5bb9debf727/economies.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY currencies FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/bfc4b7c18b703d6b51f48effaec10e59e874a3f8/currencies.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
 COPY countries FROM PROGRAM 'curl "https://assets.datacamp.com/production/repositories/6053/datasets/a466156a6b08d11a1ef12acdb30fb499d2149672/countries.csv"' (DELIMITER ',', FORMAT CSV, HEADER);
