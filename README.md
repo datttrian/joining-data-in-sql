@@ -21,6 +21,7 @@ docker cp books.csv pg-docker:/tmp/books.csv
 psql -d local postgres
 ```
 
+### Connect to a PostgreSQL database
 
 ## Instructor
 
