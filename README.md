@@ -16,12 +16,26 @@ Joining data is an essential skill that enables us to draw information from sepa
 set -euo pipefail
 mkdir -p "$HOME"/.local/docker/postgresql
 docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=local -d -p 5432:5432 -e PGDATA=/var/lib/postgresql/data/pgdata -v "$HOME"/.local/docker/postgresql/data:/var/lib/postgresql/data postgres
-docker exec -it pg-docker /bin/bash
+
+```
+
+### Copies files from the host machine into the container
+
+``` sh
 docker cp books.csv pg-docker:/tmp/books.csv
-psql -d local postgres
+```
+
+### Execute a bash shell within the container
+
+``` sh
+docker exec -it pg-docker /bin/bash
 ```
 
 ### Connect to a PostgreSQL database
+
+```
+psql -d local postgres
+```
 
 ## Instructor
 
